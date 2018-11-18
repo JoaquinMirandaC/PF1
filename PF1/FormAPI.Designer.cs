@@ -1,6 +1,6 @@
 ﻿namespace PF1
 {
-    partial class Form1
+    partial class FormAPI
     {
         /// <summary>
         /// Required designer variable.

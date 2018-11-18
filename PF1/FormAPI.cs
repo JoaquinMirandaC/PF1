@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace PF1
 {
-    public partial class Form1 : Form
+    public partial class FormAPI : Form
     {
-        public Form1 ( )
+        public FormAPI ( )
         {
             InitializeComponent();
         }
