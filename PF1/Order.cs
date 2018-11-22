@@ -37,5 +37,16 @@ namespace PF1
             string orderJson = visitor.OrderString;
             return orderJson;
         }
+        //find a way to count how many products of each type
+        public List<int> NumberOfProducts()
+        {
+            CountVisitor visitor = new CountVisitor();
+            foreach (Visitable obj in products)
+            {
+                obj.Accept(visitor);
+            }
+            List<int> countes = visitor.CountedProducts;
+            return orderJson;
+        }
     }
 }
