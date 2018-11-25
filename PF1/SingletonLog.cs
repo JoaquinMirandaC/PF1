@@ -2,33 +2,32 @@
 {
     class SingletonLog
     {
-        static private SingletonLog Instance = null;
+        public static SingletonLog Instance = null;
+        public Log log = null;
 
-        int Txt = 0;
-        int DataGrid = 0;
-        int RichTextBox = 0;
-
-        private SingletonLog (  ) { }
-
-        static public SingletonLog GetInstance()
+        private SingletonLog ( )
         {
-            if(Instance == null)
+            log = new Log();
+        }
+
+        public static SingletonLog GetInstance()
+        {
+            if (Instance == null)
             {
                 Instance = new SingletonLog();
             }
+
             return Instance;
         }
 
-        public void SaveLogs(int Txt, int DataGrid, int RichTextBox)
+        public void WriteTextBox ( string Text )
         {
-            this.Txt = Txt;
-            this.DataGrid = DataGrid;
-            this.RichTextBox = RichTextBox;
+            log.WriteTextBox( Text );
         }
 
-        public void Write(string Text)
+        public void WriteDataGrid ( string Text )
         {
-
+            log.WriteDataGrid( Text );
         }
     }
 }

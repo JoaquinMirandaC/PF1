@@ -39,7 +39,7 @@
             // 
             // NumericTxt
             // 
-            this.NumericTxt.Location = new System.Drawing.Point(12, 12);
+            this.NumericTxt.Location = new System.Drawing.Point(172, 12);
             this.NumericTxt.Maximum = new decimal(new int[] {
             -727379968,
             232,
@@ -51,7 +51,7 @@
             // 
             // NumericDataGrid
             // 
-            this.NumericDataGrid.Location = new System.Drawing.Point(12, 40);
+            this.NumericDataGrid.Location = new System.Drawing.Point(172, 40);
             this.NumericDataGrid.Maximum = new decimal(new int[] {
             -727379968,
             232,
@@ -63,7 +63,7 @@
             // 
             // NumericTextBox
             // 
-            this.NumericTextBox.Location = new System.Drawing.Point(12, 68);
+            this.NumericTextBox.Location = new System.Drawing.Point(172, 68);
             this.NumericTextBox.Maximum = new decimal(new int[] {
             -727379968,
             232,
@@ -75,9 +75,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(216, 12);
+            this.button1.Location = new System.Drawing.Point(12, 120);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(572, 426);
+            this.button1.Size = new System.Drawing.Size(280, 39);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,13 +87,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(321, 173);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NumericTextBox);
             this.Controls.Add(this.NumericDataGrid);
             this.Controls.Add(this.NumericTxt);
             this.Name = "FormLog";
-            this.Text = "FormLog";
+            this.Text = "Log Settings";
+            this.Load += new System.EventHandler(this.FormLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumericTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericTextBox)).EndInit();

@@ -12,9 +12,16 @@ namespace PF1
 
         private void button1_Click ( object sender, EventArgs e )
         {
-            SingletonLog singleton = SingletonLog.GetInstance();
+            SingletonWriter singleton = SingletonWriter.GetInstance();
             singleton.SaveLogs( (int) NumericTxt.Value, (int) NumericDataGrid.Value, (int) NumericTextBox.Value );
 
+        }
+
+        private void FormLog_Load ( object sender, EventArgs e )
+        {
+            NumericTxt.Value = SingletonWriter.GetInstance().Txt;
+            NumericTextBox.Value = SingletonWriter.GetInstance().RichTextBox;
+            NumericDataGrid.Value = SingletonWriter.GetInstance().DataGrid;
         }
     }
 }
