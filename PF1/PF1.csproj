@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>PF1</RootNamespace>
     <AssemblyName>PF1</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="QRCodeEncoderDecoderLibrary, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Sources\QRCodeEncoderDecoderLibrary.dll</HintPath>
@@ -50,8 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractStoreBuilder.cs" />
+    <Compile Include="Adapter.cs" />
+    <Compile Include="APIAdapter.cs" />
     <Compile Include="Bread.cs" />
+    <Compile Include="ClientAPI.cs" />
+    <Compile Include="SingletonLog.cs" />
     <Compile Include="ConcreteProductCreator.cs" />
+    <Compile Include="FormLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLog.Designer.cs">
+      <DependentUpon>FormLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +88,15 @@
     <Compile Include="Store.cs" />
     <Compile Include="ProductCreator.cs" />
     <Compile Include="StoreDirector.cs" />
+    <Compile Include="Target.cs" />
     <Compile Include="Vegetable.cs" />
     <Compile Include="Visitable.cs" />
     <Compile Include="Visitor.cs" />
     <EmbeddedResource Include="FormAPI.resx">
       <DependentUpon>FormAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLog.resx">
+      <DependentUpon>FormLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
@@ -93,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

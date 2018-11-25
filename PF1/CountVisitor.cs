@@ -14,11 +14,10 @@ namespace PF1
         {
             CountedProducts = new List<int>();
         }
+
         public override void Visit(Product product)
         {
-            TotalCost += (product.Quantity * product.Price);
+            //TotalCost += (product.Quantity * product.Price);
         }
-
-      
     }
 }
