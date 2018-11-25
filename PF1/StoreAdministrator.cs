@@ -19,15 +19,15 @@ namespace PF1
             StoreListTomorrow = new List<Store>();
         }
 
-        public static void AddStoreFromString(string s, string path)
-        {
-            var builder= new StoreJBuilder(s);
-            var director = new StoreDirector();
-            director.Construct(builder);
-            Store finalStore = builder.GetStore();
-            finalStore.LastOrderPath = path;
-            StoreListToday.Add(finalStore);
-        }
+        //public static void AddStoreFromString(string s, string path)
+        //{
+        //    var builder= new StoreJBuilder(s);
+        //    var director = new StoreDirector();
+        //    director.Construct(builder);
+        //    Store finalStore = builder.GetStore();
+        //    finalStore.LastOrderPath = path;
+        //    StoreListToday.Add(finalStore);
+        //}
         public static void UpadateDeliverToday()
         {
             foreach(var store in StoreListToday)
