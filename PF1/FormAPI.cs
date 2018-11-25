@@ -1,4 +1,5 @@
-﻿using QRCodeEncoderDecoderLibrary;
+﻿using Newtonsoft.Json;
+using QRCodeEncoderDecoderLibrary;
 using System;
 using System.Windows.Forms;
 
@@ -12,9 +13,7 @@ namespace PF1
         }
 
         private void button1_Click ( object sender, EventArgs e )
-        {
-            label1.Text = new APIAdapter().Decode( System.Drawing.Image.FromFile( @"C:\Users\Usuario\Downloads\UML-class-diagram-for-Interpreter-pattern.png" ) );
-
+        { 
             //QRCode.ByteArrayToStr( new QRDecoder().ImageDecoder( new System.Drawing.Bitmap( System.Drawing.Image.FromFile( @"C:\Users\Usuario\Downloads\QR CODE.bmp" ) ) ) [0] );
 
             //var client = new WebClient();
@@ -30,11 +29,18 @@ namespace PF1
 
         private void button2_Click ( object sender, EventArgs e )
         {
-            var s = new ClientAPI();
-            var a = new APIAdapter().Encode( "APIAdapter" );
-            var b = new APIAdapter().Decode( a );
+
+            var b = new StoreBuilder( "0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10" );
+            var sd = new StoreDirector();
+            sd.Construct( b );
+            Store finalStore = b.GetStore();
+            string json = JsonConvert.SerializeObject( new JsonFormat( finalStore ) );
+
+
+            var c = new ClientAPI();
+            var a = c.Encode(finalStore);
             pictureBox1.Image = a;
-            label1.Text = b;
+            //label1.Text = b;
         }
 
         private void button3_Click ( object sender, EventArgs e )
