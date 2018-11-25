@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.NumericTxt = new System.Windows.Forms.NumericUpDown();
+            this.NumericDataGrid = new System.Windows.Forms.NumericUpDown();
+            this.NumericTextBox = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericTextBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // NumericTxt
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 12);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.NumericTxt.Location = new System.Drawing.Point(12, 12);
+            this.NumericTxt.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 0;
+            this.NumericTxt.Name = "NumericTxt";
+            this.NumericTxt.Size = new System.Drawing.Size(120, 22);
+            this.NumericTxt.TabIndex = 0;
             // 
-            // numericUpDown2
+            // NumericDataGrid
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(12, 40);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.NumericDataGrid.Location = new System.Drawing.Point(12, 40);
+            this.NumericDataGrid.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown2.TabIndex = 1;
+            this.NumericDataGrid.Name = "NumericDataGrid";
+            this.NumericDataGrid.Size = new System.Drawing.Size(120, 22);
+            this.NumericDataGrid.TabIndex = 1;
             // 
-            // numericUpDown3
+            // NumericTextBox
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(12, 68);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.NumericTextBox.Location = new System.Drawing.Point(12, 68);
+            this.NumericTextBox.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown3.TabIndex = 2;
+            this.NumericTextBox.Name = "NumericTextBox";
+            this.NumericTextBox.Size = new System.Drawing.Size(120, 22);
+            this.NumericTextBox.TabIndex = 2;
             // 
             // button1
             // 
@@ -89,23 +89,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.NumericTextBox);
+            this.Controls.Add(this.NumericDataGrid);
+            this.Controls.Add(this.NumericTxt);
             this.Name = "FormLog";
             this.Text = "FormLog";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericTextBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown NumericTxt;
+        private System.Windows.Forms.NumericUpDown NumericDataGrid;
+        private System.Windows.Forms.NumericUpDown NumericTextBox;
         private System.Windows.Forms.Button button1;
     }
 }

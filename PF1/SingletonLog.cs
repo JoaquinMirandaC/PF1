@@ -3,11 +3,12 @@
     class SingletonLog
     {
         static private SingletonLog Instance = null;
+
         int Txt = 0;
         int DataGrid = 0;
         int RichTextBox = 0;
 
-        private SingletonLog ( ) { }
+        private SingletonLog (  ) { }
 
         static public SingletonLog GetInstance()
         {
