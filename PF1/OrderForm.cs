@@ -52,6 +52,9 @@ namespace PF1
                 StoreAdministrator.StoreListTomorrow.Add(captured);
                 string path = current.LastOrderPath;
                 QR.Save(path);
+
+                SingletonWriter.GetInstance().Write( "Create Order" );
+
                 this.Close();
 
             }
