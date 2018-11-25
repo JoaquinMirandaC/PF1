@@ -16,7 +16,7 @@ namespace PF1
         }
         public override void Visit(Product product)
         {
-            TotalCost += (product.Quantity * product.Price);
+            //TotalCost += (product.Quantity * product.Price);
         }
 
       

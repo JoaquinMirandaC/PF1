@@ -8,7 +8,7 @@ namespace PF1
 {
     class ConcreteProductCreator : ProductCreator
     {
-        public override Product ProductFactory(int id, int quantity, int price)
+        public override Product ProductFactory(int id, int quantity, double price)
         {
             Product product = null;
             if (id == 0)
