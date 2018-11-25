@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Windows.Forms;
 
 namespace PF1
 {
@@ -16,7 +17,7 @@ namespace PF1
 
         private SingletonWriter ( )
         {
-            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\" ), FileMode.Create );
+            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Create );
             streamWriter = new StreamWriter( logStream );
         }
 
@@ -49,11 +50,12 @@ namespace PF1
         public void Write ( string Text )
         {
             for (int i = 0; i < Txt; i++)
-                streamWriter.Write( $"{Text}\n" );
+                streamWriter.Write( Text );
             for (int i = 0; i < DataGrid; i++)
                 SingletonLog.GetInstance().WriteDataGrid( Text );
             for (int i = 0; i < RichTextBox; i++)
                 SingletonLog.GetInstance().WriteTextBox( Text );
+            MessageBox.Show("LOGS");
         }
     }
 }

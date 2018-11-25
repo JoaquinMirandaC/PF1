@@ -29,5 +29,6 @@ namespace PF1
             SingletonWriter.GetInstance().SaveLogs( 0, 1, 1 );
             SingletonWriter.GetInstance().Write( "PRUEBA" );
         }
+        
     }
 }

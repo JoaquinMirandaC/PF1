@@ -170,8 +170,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\100362375_70130154.jpg" />
+    <Content Include="Images\345155.jpg" />
+    <Content Include="Images\abjjwv6xn3x11.jpg" />
+    <Content Include="Images\backunfoc.jpg" />
     <Content Include="Sources\QRCodeEncoderDecoderLibrary.dll" />
     <Content Include="XMLFile1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
