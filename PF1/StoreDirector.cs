@@ -8,7 +8,7 @@ namespace PF1
 {
     class StoreDirector
     {
-        public void Construct(StoreBuilder builder)
+        public void Construct(AbstractStoreBuilder builder)
         {
             builder.BuildId();
             builder.BuildName();

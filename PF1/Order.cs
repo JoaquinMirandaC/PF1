@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QRCodeEncoderDecoderLibrary;
+using Newtonsoft.Json;
 
 namespace PF1
 {
     public class Order
     {
-        public List<Visitable> products;
+        [JsonProperty("products")]
+        public List<Visitable> products { get; set; }
+        [JsonIgnore]
+        public double orderValue { get; set; }
         public Order()
         {
             products = new List<Visitable>();
         }
-        public double OrderCost()
+        public void OrderCost()
         {
             ProductVisitor visitor = new ProductVisitor();
             foreach(Visitable obj in products)
@@ -21,12 +26,13 @@ namespace PF1
                 obj.Accept(visitor);
             }
             double totalCost = visitor.TotalCost;
-            return totalCost;
+            orderValue = totalCost;
         }
         public void AddItems(Product product)
         {
             products.Add(product);
         }
+    
         public string OrderJson()
         {
             JsonVisitor visitor = new JsonVisitor();
@@ -46,7 +52,7 @@ namespace PF1
                 obj.Accept(visitor);
             }
             List<int> countes = visitor.CountedProducts;
-            return orderJson;
+            return countes;
         }
     }
 }

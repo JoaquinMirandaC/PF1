@@ -8,6 +8,6 @@ namespace PF1
 {
     abstract class ProductCreator
     {
-        public abstract Product ProductFactory(int id, int quantity,int price);
+        public abstract Product ProductFactory(int id, int quantity,double price);
     }
 }
