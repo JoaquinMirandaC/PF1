@@ -25,7 +25,7 @@ namespace PF1
         {
             logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Create );
             streamWriter = new StreamWriter( logStream );
-            streamWriter.Write( "PRUEBA" );
+            streamWriter.Write( "Cambio" );
             streamWriter.Close();
 
             MessageBox.Show( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs" ));
