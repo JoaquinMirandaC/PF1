@@ -28,11 +28,12 @@ namespace PF1
             double totalCost = visitor.TotalCost;
             orderValue = totalCost;
         }
+
         public void AddItems(Product product)
         {
             products.Add(product);
         }
-    
+      
         public string OrderJson()
         {
             JsonVisitor visitor = new JsonVisitor();
@@ -44,6 +45,7 @@ namespace PF1
             return orderJson;
         }
         //find a way to count how many products of each type
+
         public List<int> NumberOfProducts()
         {
             CountVisitor visitor = new CountVisitor();
