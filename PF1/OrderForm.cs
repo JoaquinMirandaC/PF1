@@ -27,7 +27,7 @@ namespace PF1
             Store captured = new Store();
             captured.StoreOrder = new Order();
             captured.StoreId = Convert.ToInt32(idBox.Text);
-            captured.StoreName = idBox.Text;
+            captured.StoreName = nameBox.Text;
             if (ValidateProducts())
             {
                 if(Convert.ToInt32(nvegBox.Text) > 0)
@@ -45,10 +45,13 @@ namespace PF1
                     Product bread = new Bread(Convert.ToInt32(nbreadBox.Text), Convert.ToDouble(pbreadBox.Text));
                     captured.StoreOrder.AddItems(bread);
                 }
-                string json = captured.ToString();
+                ClientAPI adapter = new ClientAPI();
+                Image QR = adapter.Encode(captured);
                 //use adapter, create image from json
                 //write image, replacing the other
                 StoreAdministrator.StoreListTomorrow.Add(captured);
+                string path = current.LastOrderPath;
+                QR.Save(path);
                 this.Close();
 
             }
@@ -98,6 +101,11 @@ namespace PF1
         }
 
         private void nvegBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
         {
 
         }

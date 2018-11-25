@@ -16,7 +16,7 @@ namespace PF1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run( SingletonLog.GetInstance().log );
+            Application.Run(new MainForn());
         }
     }
 }

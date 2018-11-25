@@ -19,7 +19,7 @@ namespace PF1
         private Store store;
         public StoreJBuilder(string s)
         {
-            JObject jObject = JObject.Parse(s);
+            //JObject jObject = JObject.Parse(s);
             fromJson = new JavaScriptSerializer().Deserialize<JsonFormat>(s);
             store = new Store();
  

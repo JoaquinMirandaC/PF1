@@ -241,6 +241,7 @@
             this.Controls.Add(this.button1);
             this.Name = "OrderForm";
             this.Text = "New Order";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -27,18 +27,22 @@ namespace PF1
         }
         private void ReadImages()
         {
-            string folderPath = Path.Combine(Environment.CurrentDirectory,  @"Images\");
+            ClientAPI adapter = new ClientAPI();
+            string folderPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName,  @"Images\");
             foreach (string path in Directory.EnumerateFiles(folderPath, "*.jpg"))
             {
-
-                //get response from adapter
-                //if not null, validate in adapter //if valid, add to store administrator StoreToday
-                var b = new StoreBuilder("0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10");
-                var sd = new StoreDirector();
-                sd.Construct(b);
-                Store finalStore = b.GetStore();
-                string json = JsonConvert.SerializeObject(new JsonFormat(finalStore));
-                StoreAdministrator.AddStoreFromString(json, path);
+                Image QR = Image.FromFile(path);
+                Store converted = adapter.Decode(QR);
+                //var b = new StoreBuilder("0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10");
+                //var sd = new StoreDirector();
+                //sd.Construct(b);
+                //Store converted = b.GetStore();
+                if (converted != null)
+                {
+                    converted.LastOrderPath = path;
+                    StoreAdministrator.StoreListToday.Add(converted);
+                }
+                
 
             }
             //decide route
