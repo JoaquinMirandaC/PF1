@@ -9,11 +9,9 @@ using Newtonsoft.Json;
 namespace PF1
 {
     public class Order
-    {
-        [JsonProperty("products")]
+    {     
         public List<Visitable> products { get; set; }
-        [JsonIgnore]
-        public double orderValue { get; set; }
+        public double OrderValue { get; set; }
         public Order()
         {
             products = new List<Visitable>();
@@ -26,7 +24,7 @@ namespace PF1
                 obj.Accept(visitor);
             }
             double totalCost = visitor.TotalCost;
-            orderValue = totalCost;
+            OrderValue = totalCost;
         }
 
         public void AddItems(Product product)
@@ -44,16 +42,14 @@ namespace PF1
             string orderJson = visitor.OrderString;
             return orderJson;
         }
-        //find a way to count how many products of each type
-
-        public List<int> NumberOfProducts()
+        public List<Product> NumberOfProducts()
         {
             CountVisitor visitor = new CountVisitor();
             foreach (Visitable obj in products)
             {
                 obj.Accept(visitor);
             }
-            List<int> countes = visitor.CountedProducts;
+            List<Product> countes = visitor.CountedProducts;
             return countes;
         }
     }

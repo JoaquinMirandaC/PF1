@@ -23,5 +23,10 @@ namespace PF1
             NumericTextBox.Value = SingletonWriter.GetInstance().RichTextBox;
             NumericDataGrid.Value = SingletonWriter.GetInstance().DataGrid;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

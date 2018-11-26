@@ -8,16 +8,16 @@ namespace PF1
 {
     public class CountVisitor:Visitor
     {
-        public List<int> CountedProducts { get; set; }
+        public List<Product> CountedProducts { get; set; }
 
         public CountVisitor()
         {
-            CountedProducts = new List<int>();
+            CountedProducts = new List<Product>();
         }
 
         public override void Visit(Product product)
         {
-            //TotalCost += (product.Quantity * product.Price);
+            CountedProducts.Add(product);
         }
     }
 }

@@ -21,27 +21,21 @@ namespace PF1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var b = new StoreBuilder("0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10");
+            var b = new StoreBuilder("3 FloridaMarket2 1,a,1,3 2,a,2,4 3,a,3,10");
             var sd = new StoreDirector();
            sd.Construct(b);
             Store finalStore = b.GetStore();
-            
-            //double storeCost = finalStore.StoreOrder.OrderCost();
-            //label2.Text = $"{storeCost}";
-            
-          
 
             string json = JsonConvert.SerializeObject(new JsonFormat(finalStore));
-            label1.Text = json;
-
+            ClientAPI adapter = new ClientAPI();
+            Image QR = adapter.Encode(finalStore);
+            string path = "D:\\img3.jpg";
+            QR.Save(path);
+            QR.Dispose();
             //NEW method to create store object
-            sd = new StoreDirector();
-            var ba = new StoreJBuilder(json);
-            sd.Construct(ba);
-            finalStore = ba.GetStore();
-            string json2 = JsonConvert.SerializeObject(new JsonFormat(finalStore));
-            string path = "D:\\res.json";
-            File.WriteAllText(path, json2);
+            path = "D:\\img3.json";
+            File.WriteAllText(path, json);
+
         }
 
         private void FormOrder_Load(object sender, EventArgs e)

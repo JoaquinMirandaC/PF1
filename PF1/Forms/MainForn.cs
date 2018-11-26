@@ -27,9 +27,6 @@ namespace PF1
             streamWriter = new StreamWriter( logStream );
             streamWriter.WriteLine( $"New Session: {DateTime.Now.ToString()} \n" );
             streamWriter.Close();
-
-            MessageBox.Show( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs" ));
-
             StoreRoute ruta = new StoreRoute(this);
             ruta.Show();
             this.Hide();

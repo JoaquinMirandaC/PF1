@@ -25,10 +25,7 @@ namespace PF1
             this.Quantity = Quantity;
             this.Price = Price;
         }
-        /// <summary>
-        /// Accept the visitor
-        /// </summary>
-        /// <param name="visitor"></param>
+
         public override void Accept(Visitor visitor)
         {
             visitor.Visit(this);

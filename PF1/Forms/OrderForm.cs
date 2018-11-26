@@ -45,17 +45,27 @@ namespace PF1
                     Product bread = new Bread(Convert.ToInt32(nbreadBox.Text), Convert.ToDouble(pbreadBox.Text));
                     captured.StoreOrder.AddItems(bread);
                 }
+                StoreAdministrator.StoreListTomorrow.Add(captured);
+                //log start of order
+                SingletonWriter.GetInstance().Write("Order created from store:" + captured.StoreName);
+
+                foreach(Product p in captured.StoreOrder.NumberOfProducts())
+                {
+                    SingletonWriter.GetInstance().Write("Added " + p.Quantity + " products with ID " + p.Id);
+                }
+
+                //log end of order
+                SingletonWriter.GetInstance().Write("Order finalized " );
+
+                //log image creation
+                //adapter to create image from json
                 ClientAPI adapter = new ClientAPI();
                 Image QR = adapter.Encode(captured);
-                //use adapter, create image from json
-                //write image, replacing the other
-                StoreAdministrator.StoreListTomorrow.Add(captured);
-                string path = current.LastOrderPath;
-
+                string path = current.LastOrderPath;           
                 QR.Save( path );
                 QR.Dispose();
+                SingletonWriter.GetInstance().Write("Image from order created successfully");
 
-                SingletonWriter.GetInstance().Write( "Create Order" );
 
                 this.Close();
 
@@ -63,12 +73,7 @@ namespace PF1
             else
                 label10.Visible = true;
 
-            //capture order
-            //create new store
-            //from the store.tostring, generate json
-            
-            
-            //add store to listTomorrow
+     
         }
 
         private bool ValidateProducts()
@@ -80,8 +85,8 @@ namespace PF1
                     Flag = false;
                 if (Convert.ToInt32(pvegBox.Text) < 0 || Convert.ToInt32(psodaBox.Text) < 0 || Convert.ToInt32(pbreadBox.Text) < 0)
                     Flag = false;
-                if (Convert.ToInt32(nvegBox.Text) == 0 && Convert.ToInt32(nsodaBox.Text) == 0 && Convert.ToInt32(nbreadBox.Text) == 0)
-                    Flag = false;
+                //if (Convert.ToInt32(nvegBox.Text) == 0 && Convert.ToInt32(nsodaBox.Text) == 0 && Convert.ToInt32(nbreadBox.Text) == 0)
+                    //Flag = false;
 
             }
             catch

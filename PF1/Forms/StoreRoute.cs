@@ -30,10 +30,7 @@ namespace PF1
                 
                 Store converted = adapter.Decode( QR );
                 QR.Dispose();
-                //var b = new StoreBuilder("0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10");
-                //var sd = new StoreDirector();
-                //sd.Construct(b);
-                //Store converted = b.GetStore();
+
                 if (converted != null)
                 {
                     converted.LastOrderPath = path;
@@ -55,7 +52,7 @@ namespace PF1
 
                 buffer [0] = slave.StoreId;
                 buffer [1] = slave.StoreName;
-                buffer [2] = slave.StoreOrder.orderValue;
+                buffer [2] = slave.StoreOrder.OrderValue;
 
                 rows.Add( new DataGridViewRow() );
                 rows [rows.Count - 1].CreateCells( dataGridView1, buffer );
@@ -108,8 +105,6 @@ namespace PF1
             {
                 origin.Show();
             }
-
-
         }
 
         private void button2_Click ( object sender, EventArgs e )

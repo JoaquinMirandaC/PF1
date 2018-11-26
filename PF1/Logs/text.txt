@@ -1,11 +1,109 @@
-New Session: 25/11/2018 06:16:00 p. m. 
+New Session: 11/25/2018 11:20:04 PM 
 
-Create Order
-Create Order
-Create Order
-Create Order
-Create Order
-Create Order
-Create Order
-Create Order
-Create Order
+Order created from store:OXXO
+Added 1 products with ID 1
+Added 1 products with ID 2
+Added 1 products with ID 3
+Order finalized 
+Image from order created successfully
+Order created from store:7Eleven
+Added 15 products with ID 2
+Order finalized 
+Image from order created successfully
+Order created from store:FloridaMarket
+Added 1 products with ID 1
+Order finalized 
+Image from order created successfully
+New Session: 11/25/2018 11:23:12 PM 
+
+Order created from store:7Eleven
+Order finalized 
+Image from order created successfully
+Order created from store:OXXO
+Added 1 products with ID 1
+Added 1 products with ID 3
+Order finalized 
+Image from order created successfully
+Order created from store:FloridaMarket
+Order finalized 
+Image from order created successfully
+New Session: 11/25/2018 11:26:59 PM 
+
+New Session: 11/25/2018 11:46:44 PM 
+
+Order created from store:OXXO
+Order created from store:OXXO
+Order created from store:OXXO
+Added 4 products with ID 1
+Added 4 products with ID 1
+Added 4 products with ID 1
+Added 4 products with ID 2
+Added 4 products with ID 2
+Added 4 products with ID 2
+Added 4 products with ID 3
+Added 4 products with ID 3
+Added 4 products with ID 3
+Order finalized 
+Order finalized 
+Order finalized 
+Image from order created successfully
+Image from order created successfully
+Image from order created successfully
+Order created from store:7Eleven
+Order created from store:7Eleven
+Order created from store:7Eleven
+Added 3 products with ID 1
+Added 3 products with ID 1
+Added 3 products with ID 1
+Added 3 products with ID 2
+Added 3 products with ID 2
+Added 3 products with ID 2
+Added 3 products with ID 3
+Added 3 products with ID 3
+Added 3 products with ID 3
+Order finalized 
+Order finalized 
+Order finalized 
+Image from order created successfully
+Image from order created successfully
+Image from order created successfully
+Order created from store:FloridaMarket
+Order created from store:FloridaMarket
+Order created from store:FloridaMarket
+Added 5 products with ID 1
+Added 5 products with ID 1
+Added 5 products with ID 1
+Added 5 products with ID 2
+Added 5 products with ID 2
+Added 5 products with ID 2
+Added 5 products with ID 3
+Added 5 products with ID 3
+Added 5 products with ID 3
+Order finalized 
+Order finalized 
+Order finalized 
+Image from order created successfully
+Image from order created successfully
+Image from order created successfully
+Order created from store:FloridaMarket
+Added 4 products with ID 1
+Added 4 products with ID 2
+Added 4 products with ID 3
+Order finalized 
+Image from order created successfully
+Order created from store:OXXO
+Added 3 products with ID 1
+Added 3 products with ID 2
+Added 3 products with ID 3
+Order finalized 
+Image from order created successfully
+Order created from store:7Eleven
+Added 2 products with ID 1
+Added 2 products with ID 2
+Added 2 products with ID 3
+Order finalized 
+Image from order created successfully
+New Session: 11/25/2018 11:55:13 PM 
+
+New Session: 11/26/2018 12:13:55 AM 
+

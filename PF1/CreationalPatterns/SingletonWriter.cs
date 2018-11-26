@@ -51,7 +51,7 @@ namespace PF1
                 SingletonLog.GetInstance().WriteDataGrid( Text );
             for (int i = 0; i < RichTextBox; i++)
                 SingletonLog.GetInstance().WriteTextBox( Text );
-            MessageBox.Show( "LOGS" );
+           
         }
     }
 }

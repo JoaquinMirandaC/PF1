@@ -12,22 +12,11 @@ namespace PF1
         public static List<Store> StoreListToday;
         public static List<Store> StoreListTomorrow;
         
-
         public static void Start()
         {
             StoreListToday = new List<Store>();
             StoreListTomorrow = new List<Store>();
         }
-
-        //public static void AddStoreFromString(string s, string path)
-        //{
-        //    var builder= new StoreJBuilder(s);
-        //    var director = new StoreDirector();
-        //    director.Construct(builder);
-        //    Store finalStore = builder.GetStore();
-        //    finalStore.LastOrderPath = path;
-        //    StoreListToday.Add(finalStore);
-        //}
         public static void UpdateDeliverToday()
         {
             foreach(var store in StoreListToday)
@@ -35,13 +24,13 @@ namespace PF1
                 store.StoreOrder.OrderCost();
             }
 
-            List<Store> SortedList = StoreListToday.OrderByDescending(o => o.StoreOrder.orderValue).ToList();
+            List<Store> SortedList = StoreListToday.OrderByDescending(o => o.StoreOrder.OrderValue).ToList();
             StoreListToday = SortedList;
         }
 
         public static bool OrdersReady()
         {
-            return StoreListToday.Count == StoreListTomorrow.Count;
+            return StoreListToday.Count <= StoreListTomorrow.Count;
         }
     }
 }

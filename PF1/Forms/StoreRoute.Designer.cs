@@ -82,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15F);
-            this.label1.Location = new System.Drawing.Point(229, 45);
+            this.label1.Location = new System.Drawing.Point(253, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 31);
             this.label1.TabIndex = 1;
@@ -113,7 +113,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(464, 362);
+            this.label2.Location = new System.Drawing.Point(464, 385);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 17);
             this.label2.TabIndex = 4;
@@ -134,6 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(702, 507);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);

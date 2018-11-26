@@ -11,11 +11,11 @@ namespace PF1
         public override Product ProductFactory(int id, int quantity, double price)
         {
             Product product = null;
-            if (id == 0)
+            if (id == 2)
                 product = new Soda(quantity, price);
-            else if (id == 1)
+            else if (id == 3)
                 product = new Bread(quantity, price);
-            else if (id == 2)
+            else if (id == 1)
                 product = new Vegetable(quantity, price);
 
             return product;

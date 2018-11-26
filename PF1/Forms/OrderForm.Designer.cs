@@ -51,11 +51,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(230, 447);
+            this.button1.Location = new System.Drawing.Point(241, 447);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 30);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Place your Order";
+            this.button1.Text = "Place  Order";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -74,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(135, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Store ID:";
             // 
@@ -83,7 +83,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(135, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 17);
+            this.label3.Size = new System.Drawing.Size(97, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Store Name:";
             // 
@@ -92,7 +92,7 @@
             this.idBox.Location = new System.Drawing.Point(304, 109);
             this.idBox.Name = "idBox";
             this.idBox.ReadOnly = true;
-            this.idBox.Size = new System.Drawing.Size(100, 22);
+            this.idBox.Size = new System.Drawing.Size(100, 23);
             this.idBox.TabIndex = 4;
             this.idBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -101,7 +101,7 @@
             this.nameBox.Location = new System.Drawing.Point(304, 161);
             this.nameBox.Name = "nameBox";
             this.nameBox.ReadOnly = true;
-            this.nameBox.Size = new System.Drawing.Size(100, 22);
+            this.nameBox.Size = new System.Drawing.Size(100, 23);
             this.nameBox.TabIndex = 5;
             // 
             // label4
@@ -109,25 +109,25 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(147, 299);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 17);
+            this.label4.Size = new System.Drawing.Size(90, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Vegetables:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(147, 339);
+            this.label5.Location = new System.Drawing.Point(147, 394);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 17);
+            this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Bread:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(147, 384);
+            this.label6.Location = new System.Drawing.Point(147, 347);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 8;
             this.label6.Text = "Sodas:";
             // 
@@ -147,7 +147,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(256, 262);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 17);
+            this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Quantity";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -165,7 +165,7 @@
             // 
             this.nvegBox.Location = new System.Drawing.Point(252, 294);
             this.nvegBox.Name = "nvegBox";
-            this.nvegBox.Size = new System.Drawing.Size(79, 22);
+            this.nvegBox.Size = new System.Drawing.Size(79, 23);
             this.nvegBox.TabIndex = 13;
             this.nvegBox.TextChanged += new System.EventHandler(this.nvegBox_TextChanged);
             // 
@@ -173,44 +173,44 @@
             // 
             this.pvegBox.Location = new System.Drawing.Point(367, 294);
             this.pvegBox.Name = "pvegBox";
-            this.pvegBox.Size = new System.Drawing.Size(86, 22);
+            this.pvegBox.Size = new System.Drawing.Size(86, 23);
             this.pvegBox.TabIndex = 14;
             // 
             // pbreadBox
             // 
-            this.pbreadBox.Location = new System.Drawing.Point(367, 339);
+            this.pbreadBox.Location = new System.Drawing.Point(367, 394);
             this.pbreadBox.Name = "pbreadBox";
-            this.pbreadBox.Size = new System.Drawing.Size(86, 22);
+            this.pbreadBox.Size = new System.Drawing.Size(86, 23);
             this.pbreadBox.TabIndex = 16;
             // 
             // nbreadBox
             // 
-            this.nbreadBox.Location = new System.Drawing.Point(252, 339);
+            this.nbreadBox.Location = new System.Drawing.Point(252, 394);
             this.nbreadBox.Name = "nbreadBox";
-            this.nbreadBox.Size = new System.Drawing.Size(79, 22);
+            this.nbreadBox.Size = new System.Drawing.Size(79, 23);
             this.nbreadBox.TabIndex = 15;
             // 
             // psodaBox
             // 
-            this.psodaBox.Location = new System.Drawing.Point(367, 379);
+            this.psodaBox.Location = new System.Drawing.Point(367, 342);
             this.psodaBox.Name = "psodaBox";
-            this.psodaBox.Size = new System.Drawing.Size(86, 22);
+            this.psodaBox.Size = new System.Drawing.Size(86, 23);
             this.psodaBox.TabIndex = 18;
             // 
             // nsodaBox
             // 
-            this.nsodaBox.Location = new System.Drawing.Point(252, 379);
+            this.nsodaBox.Location = new System.Drawing.Point(252, 342);
             this.nsodaBox.Name = "nsodaBox";
-            this.nsodaBox.Size = new System.Drawing.Size(79, 22);
+            this.nsodaBox.Size = new System.Drawing.Size(79, 23);
             this.nsodaBox.TabIndex = 17;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(379, 454);
+            this.label10.Location = new System.Drawing.Point(390, 454);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 17);
+            this.label10.Size = new System.Drawing.Size(95, 17);
             this.label10.TabIndex = 19;
             this.label10.Text = "Invalid data!";
             this.label10.Visible = false;
@@ -219,6 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(626, 511);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.psodaBox);
@@ -239,6 +240,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Name = "OrderForm";
             this.Text = "New Order";
             this.Load += new System.EventHandler(this.OrderForm_Load);

@@ -6,32 +6,28 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Web.Script.Serialization;
+using System.Windows.Forms;
 
 namespace PF1
 {
     class StoreJBuilder : AbstractStoreBuilder
     {
-        private int sId;
-        private string sName;
-        private List<string> sProducts;
         private JsonFormat fromJson;
-
         private Store store;
+
         public StoreJBuilder(string s)
-        {
-            //JObject jObject = JObject.Parse(s);
-            fromJson = new JavaScriptSerializer().Deserialize<JsonFormat>(s);
+        {          
+            fromJson = new JavaScriptSerializer().Deserialize<JsonFormat>(s);        
             store = new Store();
- 
 
         }
         public override void BuildId()
         {
-            store.StoreId = fromJson.StoreId;
+            store.StoreId = fromJson.idStore;
         }
         public override void BuildName()
         {
-            store.StoreName = fromJson.StoreName;
+            store.StoreName = fromJson.storeName;
         }
         public override void BuildOrder()
         {

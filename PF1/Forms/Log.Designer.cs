@@ -63,11 +63,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Name = "Log";
-            this.Text = "Form1";
+            this.Text = "Logs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Log_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
