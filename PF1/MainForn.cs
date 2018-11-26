@@ -23,9 +23,9 @@ namespace PF1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Create );
+            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Append );
             streamWriter = new StreamWriter( logStream );
-            streamWriter.Write( "Cambio" );
+            streamWriter.WriteLine( $"New Session: {DateTime.Now.ToString()} \n" );
             streamWriter.Close();
 
             MessageBox.Show( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs" ));

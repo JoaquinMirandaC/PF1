@@ -29,8 +29,8 @@
         private void InitializeComponent ( )
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Logs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +45,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(393, 426);
             this.dataGridView1.TabIndex = 0;
             // 
+            // Logs
+            // 
+            this.Logs.HeaderText = "Log";
+            this.Logs.Name = "Logs";
+            this.Logs.Width = 350;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(411, 12);
@@ -52,12 +58,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(377, 426);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
-            // 
-            // Logs
-            // 
-            this.Logs.HeaderText = "Log";
-            this.Logs.Name = "Logs";
-            this.Logs.Width = 350;
             // 
             // Log
             // 
@@ -68,6 +68,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Log";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Log_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

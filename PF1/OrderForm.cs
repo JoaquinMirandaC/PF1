@@ -51,7 +51,9 @@ namespace PF1
                 //write image, replacing the other
                 StoreAdministrator.StoreListTomorrow.Add(captured);
                 string path = current.LastOrderPath;
-                QR.Save(path);
+
+                QR.Save( path );
+                QR.Dispose();
 
                 SingletonWriter.GetInstance().Write( "Create Order" );
 

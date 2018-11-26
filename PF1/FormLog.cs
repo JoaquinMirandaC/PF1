@@ -14,7 +14,7 @@ namespace PF1
         {
             SingletonWriter singleton = SingletonWriter.GetInstance();
             singleton.SaveLogs( (int) NumericTxt.Value, (int) NumericDataGrid.Value, (int) NumericTextBox.Value );
-
+            this.Close();
         }
 
         private void FormLog_Load ( object sender, EventArgs e )

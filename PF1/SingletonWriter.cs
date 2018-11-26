@@ -8,8 +8,6 @@ namespace PF1
     {
         private static SingletonWriter Instance = null;
 
-        FileStream logStream;
-        StreamWriter streamWriter;
 
         public int Txt { get; set; }
         public int DataGrid { get; set; }
@@ -17,18 +15,7 @@ namespace PF1
 
         private SingletonWriter ( )
         {
-            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Create );
-            streamWriter = new StreamWriter( logStream );
-        }
-
-        ~SingletonWriter ( )
-        {
-            try
-            {
-                streamWriter.Close();
-                streamWriter.Dispose();
-            }
-            catch (Exception) { }
+            
         }
 
         public static SingletonWriter GetInstance ( )
@@ -49,13 +36,22 @@ namespace PF1
 
         public void Write ( string Text )
         {
+            FileStream logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Append );
+            StreamWriter streamWriter = new StreamWriter( logStream );
+
             for (int i = 0; i < Txt; i++)
-                streamWriter.Write( Text );
+            { 
+            streamWriter.WriteLine( Text );
+        }
+
+
+            streamWriter.Close();
+
             for (int i = 0; i < DataGrid; i++)
                 SingletonLog.GetInstance().WriteDataGrid( Text );
             for (int i = 0; i < RichTextBox; i++)
                 SingletonLog.GetInstance().WriteTextBox( Text );
-            MessageBox.Show("LOGS");
+            MessageBox.Show( "LOGS" );
         }
     }
 }

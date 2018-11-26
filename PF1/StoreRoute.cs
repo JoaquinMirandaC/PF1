@@ -19,6 +19,7 @@ namespace PF1
             ReadImages();
 
         }
+
         private void ReadImages ( )
         {
             ClientAPI adapter = new ClientAPI();
@@ -26,7 +27,9 @@ namespace PF1
             foreach (string path in Directory.EnumerateFiles( folderPath, "*.jpg" ))
             {
                 Image QR = Image.FromFile( path );
+                
                 Store converted = adapter.Decode( QR );
+                QR.Dispose();
                 //var b = new StoreBuilder("0 OXXO 0,a,1,3 1,a,2,4 2,a,3,10");
                 //var sd = new StoreDirector();
                 //sd.Construct(b);
@@ -36,11 +39,9 @@ namespace PF1
                     converted.LastOrderPath = path;
                     StoreAdministrator.StoreListToday.Add( converted );
                 }
-
-
             }
             //decide route
-            StoreAdministrator.UpadateDeliverToday();
+            StoreAdministrator.UpdateDeliverToday();
             //show datagrid
             ShowTable();
         }
@@ -59,6 +60,7 @@ namespace PF1
                 rows.Add( new DataGridViewRow() );
                 rows [rows.Count - 1].CreateCells( dataGridView1, buffer );
             }
+
             dataGridView1.Rows.AddRange( rows.ToArray() );
 
         }

@@ -39,45 +39,45 @@
             // 
             // NumericTxt
             // 
-            this.NumericTxt.Location = new System.Drawing.Point(172, 12);
+            this.NumericTxt.Location = new System.Drawing.Point(156, 12);
             this.NumericTxt.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
             this.NumericTxt.Name = "NumericTxt";
-            this.NumericTxt.Size = new System.Drawing.Size(120, 22);
+            this.NumericTxt.Size = new System.Drawing.Size(80, 22);
             this.NumericTxt.TabIndex = 0;
             // 
             // NumericDataGrid
             // 
-            this.NumericDataGrid.Location = new System.Drawing.Point(172, 40);
+            this.NumericDataGrid.Location = new System.Drawing.Point(156, 40);
             this.NumericDataGrid.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
             this.NumericDataGrid.Name = "NumericDataGrid";
-            this.NumericDataGrid.Size = new System.Drawing.Size(120, 22);
+            this.NumericDataGrid.Size = new System.Drawing.Size(80, 22);
             this.NumericDataGrid.TabIndex = 1;
             // 
             // NumericTextBox
             // 
-            this.NumericTextBox.Location = new System.Drawing.Point(172, 68);
+            this.NumericTextBox.Location = new System.Drawing.Point(156, 68);
             this.NumericTextBox.Maximum = new decimal(new int[] {
             -727379968,
             232,
             0,
             0});
             this.NumericTextBox.Name = "NumericTextBox";
-            this.NumericTextBox.Size = new System.Drawing.Size(120, 22);
+            this.NumericTextBox.Size = new System.Drawing.Size(80, 22);
             this.NumericTextBox.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 120);
+            this.button1.Location = new System.Drawing.Point(12, 96);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 39);
+            this.button1.Size = new System.Drawing.Size(224, 40);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 173);
+            this.ClientSize = new System.Drawing.Size(248, 148);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NumericTextBox);
             this.Controls.Add(this.NumericDataGrid);
