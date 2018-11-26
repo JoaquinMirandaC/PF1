@@ -12,7 +12,7 @@ namespace PF1
 
         public void WriteTextBox ( string Text )
         {
-            richTextBox1.AppendText( Text );
+            richTextBox1.AppendText( Text + "\n" );
             richTextBox1.Update();
             richTextBox1.Refresh();
         }
@@ -29,6 +29,10 @@ namespace PF1
             SingletonWriter.GetInstance().SaveLogs( 0, 1, 1 );
             SingletonWriter.GetInstance().Write( "PRUEBA" );
         }
-        
+
+        private void Log_FormClosed ( object sender, FormClosedEventArgs e )
+        {
+            SingletonLog.GetInstance().log = new Log();
+        }
     }
 }

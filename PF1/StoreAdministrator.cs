@@ -28,21 +28,20 @@ namespace PF1
         //    finalStore.LastOrderPath = path;
         //    StoreListToday.Add(finalStore);
         //}
-        public static void UpadateDeliverToday()
+        public static void UpdateDeliverToday()
         {
             foreach(var store in StoreListToday)
             {
                 store.StoreOrder.OrderCost();
             }
+
             List<Store> SortedList = StoreListToday.OrderByDescending(o => o.StoreOrder.orderValue).ToList();
             StoreListToday = SortedList;
         }
+
         public static bool OrdersReady()
         {
-            if (StoreListToday.Count == StoreListTomorrow.Count)
-                return true;
-            else
-                return false;
+            return StoreListToday.Count == StoreListTomorrow.Count;
         }
     }
 }
