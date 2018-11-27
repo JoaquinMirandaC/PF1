@@ -10,8 +10,8 @@ namespace PF1
     {
         public Soda(int Quantity, double Price) :base(Quantity, Price)
         {
-            Id = 2;
-            Name = "Sodas";
+            idProduct = 2;
+            name = "Sodas";
         }
     }
 }

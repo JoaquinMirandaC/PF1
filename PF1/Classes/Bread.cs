@@ -10,8 +10,8 @@ namespace PF1
     {
         public Bread(int Quantity, double Price) : base(Quantity, Price)
         {
-            Id = 3;
-            Name = "Bread";
+            idProduct = 3;
+            name = "Bread";
         }
     }
 }

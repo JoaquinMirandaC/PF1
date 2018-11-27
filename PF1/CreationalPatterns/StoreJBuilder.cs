@@ -31,10 +31,13 @@ namespace PF1
         }
         public override void BuildOrder()
         {
+            ProductCreator factory = new ConcreteProductCreator();
             Order order = new Order();
             foreach(var product in fromJson.products)
             {
-                order.AddItems(product);
+                //factory, because the formJason list of products are generic               
+                Product item = factory.ProductFactory(product.idProduct, product.quantity, product.price);
+                order.AddItems(item);
             }
 
             store.StoreOrder = order;

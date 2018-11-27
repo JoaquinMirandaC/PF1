@@ -28,9 +28,19 @@ namespace PF1
             StoreListToday = SortedList;
         }
 
-        public static bool OrdersReady()
+        //public static bool OrdersReady()
+        //{
+        //    return StoreListToday.Count <= StoreListTomorrow.Count;
+        //}
+
+        public static Dictionary<int, int> InventoryTomorrow()
         {
-            return StoreListToday.Count <= StoreListTomorrow.Count;
+            Dictionary<int, int> inventory = new Dictionary<int, int>();
+            foreach(Store s in StoreListTomorrow)
+            {
+                inventory = s.StoreOrder.Inventory(inventory);
+            }
+            return inventory;
         }
     }
 }

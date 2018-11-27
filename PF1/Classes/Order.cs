@@ -52,5 +52,15 @@ namespace PF1
             List<Product> countes = visitor.CountedProducts;
             return countes;
         }
+        public Dictionary<int, int> Inventory(Dictionary<int, int> current)
+        {
+            InventoryVisitor visitor = new InventoryVisitor(current);
+            foreach (Visitable obj in products)
+            {
+                obj.Accept(visitor);
+            }
+            var inven = visitor.inventory;
+            return inven;
+        }
     }
 }

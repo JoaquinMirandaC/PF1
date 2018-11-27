@@ -45,13 +45,13 @@ namespace PF1
                     Product bread = new Bread(Convert.ToInt32(nbreadBox.Text), Convert.ToDouble(pbreadBox.Text));
                     captured.StoreOrder.AddItems(bread);
                 }
-                StoreAdministrator.StoreListTomorrow.Add(captured);
+                //StoreAdministrator.StoreListTomorrow.Add(captured);
                 //log start of order
                 SingletonWriter.GetInstance().Write("Order created from store:" + captured.StoreName);
 
                 foreach(Product p in captured.StoreOrder.NumberOfProducts())
                 {
-                    SingletonWriter.GetInstance().Write("Added " + p.Quantity + " products with ID " + p.Id);
+                    SingletonWriter.GetInstance().Write("Added " + p.quantity + " products with ID " + p.idProduct);
                 }
 
                 //log end of order

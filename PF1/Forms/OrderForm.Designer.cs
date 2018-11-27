@@ -116,7 +116,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(147, 394);
+            this.label5.Location = new System.Drawing.Point(147, 341);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 7;
@@ -125,7 +125,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(147, 347);
+            this.label6.Location = new System.Drawing.Point(147, 394);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 8;
@@ -178,28 +178,28 @@
             // 
             // pbreadBox
             // 
-            this.pbreadBox.Location = new System.Drawing.Point(367, 394);
+            this.pbreadBox.Location = new System.Drawing.Point(367, 341);
             this.pbreadBox.Name = "pbreadBox";
             this.pbreadBox.Size = new System.Drawing.Size(86, 23);
             this.pbreadBox.TabIndex = 16;
             // 
             // nbreadBox
             // 
-            this.nbreadBox.Location = new System.Drawing.Point(252, 394);
+            this.nbreadBox.Location = new System.Drawing.Point(252, 341);
             this.nbreadBox.Name = "nbreadBox";
             this.nbreadBox.Size = new System.Drawing.Size(79, 23);
             this.nbreadBox.TabIndex = 15;
             // 
             // psodaBox
             // 
-            this.psodaBox.Location = new System.Drawing.Point(367, 342);
+            this.psodaBox.Location = new System.Drawing.Point(367, 389);
             this.psodaBox.Name = "psodaBox";
             this.psodaBox.Size = new System.Drawing.Size(86, 23);
             this.psodaBox.TabIndex = 18;
             // 
             // nsodaBox
             // 
-            this.nsodaBox.Location = new System.Drawing.Point(252, 342);
+            this.nsodaBox.Location = new System.Drawing.Point(252, 389);
             this.nsodaBox.Name = "nsodaBox";
             this.nsodaBox.Size = new System.Drawing.Size(79, 23);
             this.nsodaBox.TabIndex = 17;

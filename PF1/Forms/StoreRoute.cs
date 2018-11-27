@@ -78,16 +78,13 @@ namespace PF1
 
         private void button1_Click ( object sender, EventArgs e )
         {
-            if (StoreAdministrator.OrdersReady())
-            {
+            
                 ShowOrigin = false;
                 StoreRoute form = new StoreRoute( origin );
                 form.Show();
                 this.Close();
-            }
-            else
-                label2.Visible = true;
         }
+           
 
         private void label1_Click ( object sender, EventArgs e )
         {

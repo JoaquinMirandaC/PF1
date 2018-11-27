@@ -16,7 +16,7 @@ namespace PF1
         }
         public override void Visit(Product product)
         {
-            OrderString += $"{product.Id},{product.Name},{product.Price},{product.Quantity} ";
+            OrderString += $"{product.idProduct},{product.name},{product.price},{product.quantity} ";
         }
     }
 }

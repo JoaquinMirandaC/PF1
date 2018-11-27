@@ -11,19 +11,19 @@ namespace PF1
     {
 
         [JsonProperty("idProduct")]
-        public int Id { get; set; }
+        public int idProduct { get; set; }
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string name { get; set; }
         [JsonProperty("quantity")]
-        public int Quantity { get; set; }
+        public int quantity { get; set; }
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public double price { get; set; }
 
         public Product() { }
         public Product(int Quantity, double Price)
         {
-            this.Quantity = Quantity;
-            this.Price = Price;
+            this.quantity = Quantity;
+            this.price = Price;
         }
 
         public override void Accept(Visitor visitor)
