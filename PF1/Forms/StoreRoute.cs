@@ -98,6 +98,7 @@ namespace PF1
 
         private void StoreRoute_FormClosed ( object sender, FormClosedEventArgs e )
         {
+            
             if (ShowOrigin)
             {
                 origin.Show();

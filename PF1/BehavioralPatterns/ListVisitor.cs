@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PF1
 {
-    public class CountVisitor:Visitor
+    public class ListVisitor:Visitor
     {
         public List<Product> CountedProducts { get; set; }
 
-        public CountVisitor()
+        public ListVisitor()
         {
             CountedProducts = new List<Product>();
         }

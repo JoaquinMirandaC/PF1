@@ -89,7 +89,7 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="BehavioralPatterns\CountVisitor.cs" />
+    <Compile Include="BehavioralPatterns\ListVisitor.cs" />
     <Compile Include="Classes\JsonFormat.cs" />
     <Compile Include="Forms\MainForn.cs">
       <SubType>Form</SubType>
@@ -106,7 +106,7 @@
     <Compile Include="Classes\StoreAdministrator.cs" />
     <Compile Include="CreationalPatterns\StoreJBuilder.cs" />
     <Compile Include="StoreBuilder.cs" />
-    <Compile Include="BehavioralPatterns\JsonVisitor.cs" />
+    <Compile Include="JsonVisitor.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="FormAPI.cs">

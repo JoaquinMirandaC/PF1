@@ -44,7 +44,7 @@ namespace PF1
         }
         public List<Product> NumberOfProducts()
         {
-            CountVisitor visitor = new CountVisitor();
+            ListVisitor visitor = new ListVisitor();
             foreach (Visitable obj in products)
             {
                 obj.Accept(visitor);
