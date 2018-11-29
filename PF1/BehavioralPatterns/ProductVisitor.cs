@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PF1
 {
-    public class ProductVisitor:Visitor
+    public class ProductVisitor : Visitor
     {
         public double TotalCost { get; set; }
 
