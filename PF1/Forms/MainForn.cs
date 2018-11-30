@@ -34,9 +34,9 @@ namespace PF1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Simulation sim = new Simulation(this);
-            //sim.Show();
-            //this.Hide();
+            Simulation sim = new Simulation(this);
+            sim.Show();
+            this.Hide();
         }
     }
 }

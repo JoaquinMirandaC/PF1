@@ -92,9 +92,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(557, 414);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 33);
+            this.button1.Size = new System.Drawing.Size(101, 49);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Go next day";
+            this.button1.Text = "Go to Simulation";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -129,8 +129,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Name = "StoreRoute";
             this.Text = "Store Administration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StoreRoute_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StoreRoute_FormClosed);
             this.Load += new System.EventHandler(this.StoreRoute_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

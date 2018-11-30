@@ -9,11 +9,13 @@ namespace PF1
     public partial class StoreRoute : Form
     {
         private bool ShowOrigin;
+        private bool ShowWarning;
         private MainForn origin;
         public StoreRoute ( MainForn origin )
         {
             this.origin = origin;
             ShowOrigin = true;
+            ShowWarning = true;
             InitializeComponent();
             StoreAdministrator.Start();
             ReadImages();
@@ -80,7 +82,8 @@ namespace PF1
         {
             
                 ShowOrigin = false;
-                StoreRoute form = new StoreRoute( origin );
+                ShowWarning = false;
+                Simulation form = new Simulation( origin );
                 form.Show();
                 this.Close();
         }
@@ -113,6 +116,19 @@ namespace PF1
         private void button3_Click ( object sender, EventArgs e )
         {
             SingletonLog.GetInstance().log.Show();
+        }
+
+        private void StoreRoute_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(ShowWarning)
+            {
+                var window = MessageBox.Show("You are missing the simulation, are you sure?",
+                "Simmulation Missing",
+                MessageBoxButtons.YesNo);
+
+                e.Cancel = (window == DialogResult.No);
+            }
+           
         }
     }
 }

@@ -57,13 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BehavioralPatterns\InventoryVisitor.cs" />
+    <Compile Include="BehavioralPatterns\BreadTrucks.cs" />
     <Compile Include="CreationalPatterns\AbstractStoreBuilder.cs" />
-    <Compile Include="Simulation.cs">
+    <Compile Include="BehavioralPatterns\ProductHandler.cs" />
+    <Compile Include="Forms\Simulation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Simulation.Designer.cs">
+    <Compile Include="Forms\Simulation.Designer.cs">
       <DependentUpon>Simulation.cs</DependentUpon>
     </Compile>
+    <Compile Include="BehavioralPatterns\SodaTrucks.cs" />
     <Compile Include="StructuralPatterns\Adapter.cs" />
     <Compile Include="StructuralPatterns\APIAdapter.cs" />
     <Compile Include="Classes\Bread.cs" />
@@ -132,6 +135,7 @@
     <Compile Include="Classes\Vegetable.cs" />
     <Compile Include="BehavioralPatterns\Visitable.cs" />
     <Compile Include="BehavioralPatterns\Visitor.cs" />
+    <Compile Include="BehavioralPatterns\VegetableTrucks.cs" />
     <EmbeddedResource Include="FormAPI.resx">
       <DependentUpon>FormAPI.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,7 +167,7 @@
     <EmbeddedResource Include="Forms\StoreRoute.resx">
       <DependentUpon>StoreRoute.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Simulation.resx">
+    <EmbeddedResource Include="Forms\Simulation.resx">
       <DependentUpon>Simulation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
