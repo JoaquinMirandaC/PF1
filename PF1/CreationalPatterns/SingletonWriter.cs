@@ -13,17 +13,12 @@ namespace PF1
         public int DataGrid { get; set; }
         public int RichTextBox { get; set; }
 
-        private SingletonWriter ( )
-        {
-            
-        }
+        private SingletonWriter ( ){ }
 
         public static SingletonWriter GetInstance ( )
         {
             if (Instance == null)
-            {
                 Instance = new SingletonWriter();
-            }
             return Instance;
         }
 
@@ -40,18 +35,13 @@ namespace PF1
             StreamWriter streamWriter = new StreamWriter( logStream );
 
             for (int i = 0; i < Txt; i++)
-            { 
-            streamWriter.WriteLine( Text );
-        }
-
-
+                streamWriter.WriteLine( Text );
             streamWriter.Close();
 
             for (int i = 0; i < DataGrid; i++)
                 SingletonLog.GetInstance().WriteDataGrid( Text );
             for (int i = 0; i < RichTextBox; i++)
                 SingletonLog.GetInstance().WriteTextBox( Text );
-           
         }
     }
 }

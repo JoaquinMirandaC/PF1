@@ -19,16 +19,18 @@ namespace PF1
         {          
             fromJson = new JavaScriptSerializer().Deserialize<JsonFormat>(s);        
             store = new Store();
-
         }
+
         public override void BuildId()
         {
             store.StoreId = fromJson.idStore;
         }
+
         public override void BuildName()
         {
             store.StoreName = fromJson.storeName;
         }
+
         public override void BuildOrder()
         {
             ProductCreator factory = new ConcreteProductCreator();
@@ -42,6 +44,7 @@ namespace PF1
 
             store.StoreOrder = order;
         }
+
         public override Store GetStore()
         {
             return store;

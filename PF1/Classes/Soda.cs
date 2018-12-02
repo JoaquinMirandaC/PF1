@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PF1
 {
-    public class Soda:Product
+    public class Soda : Product
     {
         public Soda(int Quantity, double Price) :base(Quantity, Price)
         {

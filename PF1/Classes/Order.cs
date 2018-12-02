@@ -16,6 +16,7 @@ namespace PF1
         {
             products = new List<Visitable>();
         }
+
         public void OrderCost()
         {
             ProductVisitor visitor = new ProductVisitor();
@@ -31,27 +32,18 @@ namespace PF1
         {
             products.Add(product);
         }
-      
-        public string OrderJson()
-        {
-            JsonVisitor visitor = new JsonVisitor();
-            foreach (Visitable obj in products)
-            {
-                obj.Accept(visitor);
-            }
-            string orderJson = visitor.OrderString;
-            return orderJson;
-        }
-        public List<Product> NumberOfProducts()
+
+        public List<Product> ListOfProducts()
         {
             ListVisitor visitor = new ListVisitor();
             foreach (Visitable obj in products)
             {
                 obj.Accept(visitor);
             }
-            List<Product> countes = visitor.CountedProducts;
-            return countes;
+            List<Product> count = visitor.CountedProducts;
+            return count;
         }
+
         public Dictionary<int, int> Inventory(Dictionary<int, int> current)
         {
             InventoryVisitor visitor = new InventoryVisitor(current);
@@ -59,7 +51,7 @@ namespace PF1
             {
                 obj.Accept(visitor);
             }
-            var inven = visitor.inventory;
+            Dictionary<int, int> inven = visitor.inventory;
             return inven;
         }
     }

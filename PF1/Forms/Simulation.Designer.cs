@@ -40,6 +40,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vegetablecount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.breadcount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sodacount)).BeginInit();
@@ -57,6 +58,7 @@
             this.vegetablecount.ReadOnly = true;
             this.vegetablecount.Size = new System.Drawing.Size(120, 23);
             this.vegetablecount.TabIndex = 0;
+            this.vegetablecount.ValueChanged += new System.EventHandler(this.vegetablecount_ValueChanged);
             // 
             // breadcount
             // 
@@ -70,6 +72,7 @@
             this.breadcount.ReadOnly = true;
             this.breadcount.Size = new System.Drawing.Size(120, 23);
             this.breadcount.TabIndex = 1;
+            this.breadcount.ValueChanged += new System.EventHandler(this.breadcount_ValueChanged);
             // 
             // sodacount
             // 
@@ -83,12 +86,13 @@
             this.sodacount.ReadOnly = true;
             this.sodacount.Size = new System.Drawing.Size(120, 23);
             this.sodacount.TabIndex = 2;
+            this.sodacount.ValueChanged += new System.EventHandler(this.sodacount_ValueChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 326);
+            this.button1.Location = new System.Drawing.Point(204, 334);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 27);
+            this.button1.Size = new System.Drawing.Size(116, 33);
             this.button1.TabIndex = 3;
             this.button1.Text = "Simulate";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,7 +102,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(466, 326);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 49);
+            this.button2.Size = new System.Drawing.Size(111, 53);
             this.button2.TabIndex = 4;
             this.button2.Text = "Deliver the next day";
             this.button2.UseVisualStyleBackColor = true;
@@ -107,17 +111,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 150);
+            this.label1.Location = new System.Drawing.Point(59, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Vegetable Trucks";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 280);
+            this.label2.Location = new System.Drawing.Point(59, 276);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 6;
@@ -126,7 +129,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 215);
+            this.label3.Location = new System.Drawing.Point(59, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 7;
@@ -140,7 +143,6 @@
             this.label4.Size = new System.Drawing.Size(167, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Last simulation results";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // richTextBox1
             // 
@@ -158,7 +160,6 @@
             this.label5.Size = new System.Drawing.Size(131, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Number of trucks";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -170,12 +171,23 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Simulation of Route";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(34, 334);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 33);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Show Logs";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Simulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(615, 392);
+            this.ClientSize = new System.Drawing.Size(615, 411);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.richTextBox1);
@@ -192,7 +204,6 @@
             this.Name = "Simulation";
             this.Text = "Simulation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Simulation_FormClosed);
-            this.Load += new System.EventHandler(this.Simulation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vegetablecount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.breadcount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sodacount)).EndInit();
@@ -215,5 +226,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button3;
     }
 }

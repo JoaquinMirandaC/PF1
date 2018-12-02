@@ -86,12 +86,6 @@
     <Compile Include="Forms\FormLog.Designer.cs">
       <DependentUpon>FormLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormOrder.Designer.cs">
-      <DependentUpon>FormOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="BehavioralPatterns\ListVisitor.cs" />
     <Compile Include="Classes\JsonFormat.cs" />
     <Compile Include="Forms\MainForn.cs">
@@ -108,16 +102,8 @@
     </Compile>
     <Compile Include="Classes\StoreAdministrator.cs" />
     <Compile Include="CreationalPatterns\StoreJBuilder.cs" />
-    <Compile Include="StoreBuilder.cs" />
-    <Compile Include="JsonVisitor.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\Product.cs" />
-    <Compile Include="FormAPI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAPI.Designer.cs">
-      <DependentUpon>FormAPI.cs</DependentUpon>
-    </Compile>
     <Compile Include="BehavioralPatterns\ProductVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,14 +122,8 @@
     <Compile Include="BehavioralPatterns\Visitable.cs" />
     <Compile Include="BehavioralPatterns\Visitor.cs" />
     <Compile Include="BehavioralPatterns\VegetableTrucks.cs" />
-    <EmbeddedResource Include="FormAPI.resx">
-      <DependentUpon>FormAPI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLog.resx">
       <DependentUpon>FormLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormOrder.resx">
-      <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Log.resx">
       <DependentUpon>Log.cs</DependentUpon>

@@ -20,26 +20,19 @@ namespace PF1
         public static void UpdateDeliverToday()
         {
             foreach(var store in StoreListToday)
-            {
                 store.StoreOrder.OrderCost();
-            }
 
             List<Store> SortedList = StoreListToday.OrderByDescending(o => o.StoreOrder.OrderValue).ToList();
             StoreListToday = SortedList;
         }
 
-        //public static bool OrdersReady()
-        //{
-        //    return StoreListToday.Count <= StoreListTomorrow.Count;
-        //}
 
         public static Dictionary<int, int> InventoryTomorrow()
         {
             Dictionary<int, int> inventory = new Dictionary<int, int>();
             foreach(Store s in StoreListTomorrow)
-            {
                 inventory = s.StoreOrder.Inventory(inventory);
-            }
+
             return inventory;
         }
     }

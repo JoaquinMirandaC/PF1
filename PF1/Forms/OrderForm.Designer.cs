@@ -94,7 +94,6 @@
             this.idBox.ReadOnly = true;
             this.idBox.Size = new System.Drawing.Size(100, 23);
             this.idBox.TabIndex = 4;
-            this.idBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // nameBox
             // 
@@ -140,7 +139,6 @@
             this.label8.Size = new System.Drawing.Size(98, 25);
             this.label8.TabIndex = 10;
             this.label8.Text = "Products";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -150,7 +148,6 @@
             this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Quantity";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label9
             // 
@@ -167,7 +164,6 @@
             this.nvegBox.Name = "nvegBox";
             this.nvegBox.Size = new System.Drawing.Size(79, 23);
             this.nvegBox.TabIndex = 13;
-            this.nvegBox.TextChanged += new System.EventHandler(this.nvegBox_TextChanged);
             // 
             // pvegBox
             // 
@@ -243,7 +239,6 @@
             this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Name = "OrderForm";
             this.Text = "New Order";
-            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

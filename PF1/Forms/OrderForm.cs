@@ -49,7 +49,7 @@ namespace PF1
                 //log start of order
                 SingletonWriter.GetInstance().Write("Order created from store:" + captured.StoreName);
 
-                foreach(Product p in captured.StoreOrder.NumberOfProducts())
+                foreach(Product p in captured.StoreOrder.ListOfProducts())
                 {
                     SingletonWriter.GetInstance().Write("Added " + p.quantity + " products with ID " + p.idProduct);
                 }
@@ -65,15 +65,10 @@ namespace PF1
                 QR.Save( path );
                 QR.Dispose();
                 SingletonWriter.GetInstance().Write("Image from order created successfully");
-
-
                 this.Close();
-
             }
             else
                 label10.Visible = true;
-
-     
         }
 
         private bool ValidateProducts()
@@ -85,8 +80,6 @@ namespace PF1
                     Flag = false;
                 if (Convert.ToInt32(pvegBox.Text) < 0 || Convert.ToInt32(psodaBox.Text) < 0 || Convert.ToInt32(pbreadBox.Text) < 0)
                     Flag = false;
-                //if (Convert.ToInt32(nvegBox.Text) == 0 && Convert.ToInt32(nsodaBox.Text) == 0 && Convert.ToInt32(nbreadBox.Text) == 0)
-                    //Flag = false;
 
             }
             catch
@@ -94,30 +87,6 @@ namespace PF1
                 Flag = false;
             }
             return Flag;
-        }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nvegBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OrderForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

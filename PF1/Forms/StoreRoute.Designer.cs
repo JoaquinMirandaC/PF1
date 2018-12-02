@@ -86,7 +86,6 @@
             this.label1.Size = new System.Drawing.Size(176, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Store Routes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -134,7 +133,6 @@
             this.Text = "Store Administration";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StoreRoute_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StoreRoute_FormClosed);
-            this.Load += new System.EventHandler(this.StoreRoute_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

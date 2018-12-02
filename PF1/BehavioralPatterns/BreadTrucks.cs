@@ -14,6 +14,7 @@ namespace PF1
             int numberofproducts_truck = 270;
             this.Capacity = n_trucks * numberofproducts_truck;
         }
+
         public override Dictionary<int, int> ProcessRequest(Dictionary<int, int> inventory)
         {
             int bread_id = 3;

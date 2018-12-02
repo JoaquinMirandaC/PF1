@@ -11,21 +11,21 @@ namespace PF1
     {
         [JsonProperty("idStore")]
         public int idStore { get; set; }
+
         [JsonProperty("storeName")]
         public string storeName { get; set; }
 
         [JsonProperty("products")]
         public List<Product> products { get; set; }
 
-        public JsonFormat()
-        { }
+        public JsonFormat(){ }
+
         public JsonFormat(Store s)
         {
             products = new List<Product>();
             idStore = s.StoreId;
             storeName = s.StoreName;
-            products = s.StoreOrder.NumberOfProducts();
-
+            products = s.StoreOrder.ListOfProducts();
         }
 
     }

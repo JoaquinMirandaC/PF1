@@ -11,6 +11,7 @@ namespace PF1
         private bool ShowOrigin;
         private bool ShowWarning;
         private MainForn origin;
+
         public StoreRoute ( MainForn origin )
         {
             this.origin = origin;
@@ -19,7 +20,6 @@ namespace PF1
             InitializeComponent();
             StoreAdministrator.Start();
             ReadImages();
-
         }
 
         private void ReadImages ( )
@@ -44,6 +44,7 @@ namespace PF1
             //show datagrid
             ShowTable();
         }
+
         public void ShowTable ( )
         {
             dataGridView1.Rows.Clear();
@@ -59,9 +60,7 @@ namespace PF1
                 rows.Add( new DataGridViewRow() );
                 rows [rows.Count - 1].CreateCells( dataGridView1, buffer );
             }
-
             dataGridView1.Rows.AddRange( rows.ToArray() );
-
         }
 
         private void dataGridView1_CellContentClick ( object sender, DataGridViewCellEventArgs e )
@@ -80,32 +79,17 @@ namespace PF1
 
         private void button1_Click ( object sender, EventArgs e )
         {
-            
-                ShowOrigin = false;
-                ShowWarning = false;
-                Simulation form = new Simulation( origin );
-                form.Show();
-                this.Close();
-        }
-           
-
-        private void label1_Click ( object sender, EventArgs e )
-        {
-
-        }
-
-        private void StoreRoute_Load ( object sender, EventArgs e )
-        {
-
+            ShowOrigin = false;
+            ShowWarning = false;
+            Simulation form = new Simulation( origin );
+            form.Show();
+            this.Close();
         }
 
         private void StoreRoute_FormClosed ( object sender, FormClosedEventArgs e )
         {
-            
             if (ShowOrigin)
-            {
                 origin.Show();
-            }
         }
 
         private void button2_Click ( object sender, EventArgs e )
@@ -128,7 +112,6 @@ namespace PF1
 
                 e.Cancel = (window == DialogResult.No);
             }
-           
         }
     }
 }

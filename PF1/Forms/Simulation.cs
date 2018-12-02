@@ -15,6 +15,10 @@ namespace PF1
     {
         private bool ShowOrigin;
         private MainForn origin;
+        private int vegcount;
+        private int sodcount;
+        private int bredcount;
+
         public Simulation(MainForn origin)
         {
             this.origin = origin;
@@ -23,6 +27,9 @@ namespace PF1
             StoreAdministrator.Start();
             ReadImages();
             button2.Enabled = false;
+            vegcount = 0;
+            sodcount = 0;
+            bredcount = 0;
 
         }
         private void ReadImages()
@@ -42,7 +49,8 @@ namespace PF1
                     StoreAdministrator.StoreListTomorrow.Add(converted);
                 }
             }
-         
+            SingletonWriter.GetInstance().Write("Simulation Started");
+
         }
         void AppendText(RichTextBox box, Color color, string text)
         {
@@ -78,28 +86,22 @@ namespace PF1
             {
 
                 if(keyValuePair.Value > 0)
-                    AppendText(richTextBox1, Color.Red, "The demand of product " + keyValuePair.Key.ToString() + " cannot be supplied with " + keyValuePair.Value.ToString() + " products missing \n");
+                    AppendText(richTextBox1, Color.Red, "The demand of product with ID " + keyValuePair.Key.ToString() + " cannot be supplied with " + keyValuePair.Value.ToString() + " products missing \n");
    
-
                 else if (keyValuePair.Value == 0)
                 {   
-                    AppendText(richTextBox1, Color.LightGreen, "The demand of product " + keyValuePair.Key.ToString() + " can be supplied " + "\n");
+                    AppendText(richTextBox1, Color.LightGreen, "The demand of product with ID " + keyValuePair.Key.ToString() + " can be supplied " + "\n");
                     validate++;
                 }
                     
-
                 else
                 {
-                    AppendText(richTextBox1, Color.Green, "The demand of product " + keyValuePair.Key.ToString() + " can be supplied with " + (keyValuePair.Value*-1).ToString() + " products left over \n");
+                    AppendText(richTextBox1, Color.Green, "The demand of product with ID " + keyValuePair.Key.ToString() + " can be supplied with " + (keyValuePair.Value*-1).ToString() + " products left over \n");
                     validate++;
                 }
-                   
-
             }
-            if (validate >= 3) //meaning the three products can be sent
-                button2.Enabled = true;
-            else
-                button2.Enabled = false;
+            //meaning the three products can be sent
+            button2.Enabled = validate >= 3;
 
         }
 
@@ -109,21 +111,7 @@ namespace PF1
             {
                 origin.Show();
             }
-        }
-
-        private void Simulation_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
+            SingletonWriter.GetInstance().Write("Simulation Finished");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,10 +122,41 @@ namespace PF1
             form.Show();
             this.Close();
         }
+        
 
-        private void label5_Click(object sender, EventArgs e)
+        private void vegetablecount_ValueChanged(object sender, EventArgs e)
         {
+            if((int)vegetablecount.Value > vegcount)
+                SingletonWriter.GetInstance().Write("Added 1 Vegetable Truck");
+            else
+                SingletonWriter.GetInstance().Write("Removed 1 Vegetable Truck");
 
+            vegcount = (int)vegetablecount.Value;
+        }
+
+        private void sodacount_ValueChanged(object sender, EventArgs e)
+        {
+            if ((int)sodacount.Value > sodcount)
+                SingletonWriter.GetInstance().Write("Added 1 Soda Truck");
+            else
+                SingletonWriter.GetInstance().Write("Removed 1 Soda Truck");
+
+            sodcount = (int)sodacount.Value;
+        }
+
+        private void breadcount_ValueChanged(object sender, EventArgs e)
+        {
+            if ((int)breadcount.Value > bredcount)
+                SingletonWriter.GetInstance().Write("Added 1 Bread Truck");
+            else
+                SingletonWriter.GetInstance().Write("Removed 1 Bread Truck");
+
+            bredcount = (int)breadcount.Value;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SingletonLog.GetInstance().log.Show();
         }
     }
 }

@@ -19,14 +19,14 @@ namespace PF1
         public MainForn()
         {
             InitializeComponent();
+            logStream = File.Open(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, @"Logs\\text.txt"), FileMode.Append);
+            streamWriter = new StreamWriter(logStream);
+            streamWriter.WriteLine($"New Session: {DateTime.Now.ToString()} \n");
+            streamWriter.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            logStream = File.Open( Path.Combine( Directory.GetParent( Directory.GetCurrentDirectory() ).Parent.FullName, @"Logs\\text.txt" ), FileMode.Append );
-            streamWriter = new StreamWriter( logStream );
-            streamWriter.WriteLine( $"New Session: {DateTime.Now.ToString()} \n" );
-            streamWriter.Close();
             StoreRoute ruta = new StoreRoute(this);
             ruta.Show();
             this.Hide();
